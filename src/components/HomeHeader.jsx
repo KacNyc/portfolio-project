@@ -35,9 +35,6 @@ const Home = () => {
                     </div>
                 </section>
             </header>
-            <main>
-                {/* Możesz umieścić tutaj inne sekcje strony */}
-            </main>
         </>
     );
 };

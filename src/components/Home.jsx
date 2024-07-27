@@ -12,8 +12,8 @@ const Home = () => {
     return (
         <>
             <HomeHeader />
-            <HomeMain />
             <HomeThreeColumns />
+            <HomeMain />
             <HomeSteps />
             <HomeAbout />
             <HomeHelp />
