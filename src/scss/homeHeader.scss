@@ -1,0 +1,146 @@
+/* Nagłówek i pasek logowania */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 142px; /* Odstęp od prawej krawędzi */
+  padding: 0;
+  width: 100%;
+  width: calc(100% - 142px);
+}
+
+/* Przyciski logowania i Rejestracji */
+.loginBar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative; /* Aby móc dokładnie ustawić pozycję */
+  z-index: 10; /* Wyższy z-index, aby były na wierzchu */
+}
+
+.loginBar li {
+  display: inline-block;
+  text-decoration: none;
+  color: #737373;
+  padding: 9px 10px;
+  font-size: 13px;
+  border: 0.75px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.loginBar li:hover {
+  border-color: #FAD648;
+  color: #737373;
+}
+
+/* Stylizacja wewnętrznych elementów li, aby mogły być klikalne */
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Menu bar */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Aby menu było na wierzchu */
+  z-index: 10; /* Wyższy z-index, aby było na wierzchu */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+nav li {
+  text-decoration: none;
+  color: #3C3C3C;
+  padding: 9px 10px;
+  font-size: 18px;
+  border: 0.75px solid transparent; /* Transparentny border, który zmienia się na kolorowy przy hover */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+nav li:hover {
+  border-color: #3C3C3C;
+}
+/* Obraz */
+.header-image {
+  height: 963px; /* Wysokość obrazu */
+  position: absolute; /* Ustawienie obrazu poza normalnym przepływem dokumentu */
+  right: 0; /* Wyrównanie obrazu do prawej krawędzi strony */
+  top: 0; /* Wyrównanie obrazu do górnej krawędzi strony */
+  margin-right: 873px; /* Odstęp od prawej krawędzi strony */
+  z-index: -1; /* Ustawienie obrazu za innymi elementami */
+}
+
+/* Sekcja Hero */
+.hero {
+  display: flex;
+  flex-direction: column; /* Ustawia elementy w kolumnie */
+  margin-left: 42rem;
+  height: 350px;
+  width: 50rem;
+}
+
+/* Kontener dla treści */
+.hero-content {
+  display: flex;
+  flex-direction: column; /* Ustawia elementy w kolumnie */
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Umożliwia dopasowanie wysokości kontenera */
+  justify-content: center; /* Wyśrodkowuje treść pionowo */
+  margin-top: 300px;
+}
+
+/* Styl dla linków w hero-content */
+.hero-content a {
+  font-size: 38px; /* Rozmiar czcionki dla linków */
+  color: #3C3C3C; /* Kolor czcionki */
+  margin-bottom: 20px; /* Odstęp między elementami */
+  letter-spacing: -0.76px;
+}
+
+/* Styl dla obrazka w hero-content */
+.hero-content img {
+  width: 253px; /* Szerokość obrazka */
+  margin-top: 25px;
+  margin-bottom: 65px; /* Odstęp między obrazkiem a przyciskami */
+}
+
+/* Styl dla kontenera przycisków */
+.hero-btn {
+  display: flex;
+  flex-direction: row; /* Ustawia przyciski obok siebie */
+  gap: 44px; /* Odstęp między przyciskami */
+}
+
+/* Styl dla przycisków */
+.hero-content .button { /* Użyj .hero-content .button aby zwiększyć specyfikę */
+  font-size: 36px; /* Rozmiar czcionki przycisków */
+  font-weight: 300; /* Waga czcionki przycisków */
+  border: 0.75px solid #3C3C3C; /* Kolor borderu przycisków */
+  width: 310px;
+  height: 120px;
+  text-decoration: none; /* Usunięcie podkreślenia linków */
+  color: #3C3C3C; /* Kolor tekstu przycisków */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
