@@ -1,5 +1,34 @@
-section {
+.HomeThreeColumns {
   width: 100%;
   height: 384px;
-  background-image: url('./assets/assets/3 Columns Background.png');
+  background-image: url('src/assets/assets/3 Columns Background.png');
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.HomeThreeColumnsComponent {
+  width: 334px;
+  height: 252px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  font: normal normal 300 90px/122px Open Sans;
+  color: #5E5322;
+
+}
+
+a {
+  font: normal normal normal 18px/30px Open Sans;
+  letter-spacing: -0.36px;
+  color: #3C3C3C;
+}
+
+p {
+  font: normal normal 300 16px/18px Merriweather;
+  letter-spacing: -0.32px;
+  color: #3C3C3C;
 }
