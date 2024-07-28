@@ -14,21 +14,21 @@
   flex-direction: column;
 }
 
-h1 {
+.HomeThreeColumnsComponent h1 {
   margin: 0;
-  font: normal normal 300 90px/122px Open Sans;
+  font: normal normal 300 90px Open Sans;
   color: #5E5322;
 
 }
 
-a {
-  font: normal normal normal 18px/30px Open Sans;
+.HomeThreeColumnsComponent a {
+  font: normal normal normal 18px Open Sans;
   letter-spacing: -0.36px;
   color: #3C3C3C;
 }
 
-p {
-  font: normal normal 300 16px/18px Merriweather;
+.HomeThreeColumnsComponent p {
+  font: normal normal 300 16px Merriweather;
   letter-spacing: -0.32px;
   color: #3C3C3C;
 }
