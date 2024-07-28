@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Element } from 'react-scroll';
 import '../scss/homeHeader.scss';
+import HomeSteps from './HomeSteps';
+import HomeThreeColumns from "./HomeThreeColumns.jsx";
 
 const Home = () => {
     return (
@@ -17,7 +19,7 @@ const Home = () => {
                 <nav>
                     <ul>
                         <li><RouterLink to="/">Start</RouterLink></li>
-                        <li><ScrollLink to="about" smooth={true}>O co chodzi?</ScrollLink></li>
+                        <li><ScrollLink to="home-steps" smooth={true}>O co chodzi?</ScrollLink></li>
                         <li><ScrollLink to="about-us" smooth={true}>O nas</ScrollLink></li>
                         <li><ScrollLink to="organizations" smooth={true}>Fundacja i organizacje</ScrollLink></li>
                         <li><ScrollLink to="contact" smooth={true}>Kontakt</ScrollLink></li>
@@ -31,10 +33,30 @@ const Home = () => {
                             <RouterLink to="/login" className="button">ODDAJ RZECZY</RouterLink>
                             <RouterLink to="/login" className="button">ZORGANIZUJ ZBIÓRKĘ</RouterLink>
                         </div>
-
                     </div>
                 </section>
             </header>
+            <Element name="HomeThreeColumns">
+                <HomeThreeColumns />
+            </Element>
+            <Element name="home-steps">
+                <HomeSteps />
+            </Element>
+            <Element name="about-us">
+                <section id="about-us">
+                    {/* Zawartość sekcji "O nas" */}
+                </section>
+            </Element>
+            <Element name="organizations">
+                <section id="organizations">
+                    {/* Zawartość sekcji "Fundacja i organizacje" */}
+                </section>
+            </Element>
+            <Element name="contact">
+                <section id="contact">
+                    {/* Zawartość sekcji "Kontakt" */}
+                </section>
+            </Element>
         </>
     );
 };
