@@ -4,6 +4,7 @@ import { Link as ScrollLink, Element } from 'react-scroll';
 import '../scss/homeHeader.scss';
 import HomeSteps from './HomeSteps';
 import HomeThreeColumns from "./HomeThreeColumns.jsx";
+import HomeAbout from "./HomeAbout.jsx";
 
 const Home = () => {
     return (
@@ -44,7 +45,7 @@ const Home = () => {
             </Element>
             <Element name="about-us">
                 <section id="about-us">
-                    {/* Zawartość sekcji "O nas" */}
+                    <HomeAbout />
                 </section>
             </Element>
             <Element name="organizations">

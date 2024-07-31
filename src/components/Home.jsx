@@ -14,11 +14,11 @@ const Home = () => {
             <HomeHeader />
             {/*<HomeThreeColumns />*/}
             {/*<HomeSteps />*/}
-            <HomeMain />
-            <HomeAbout />
-            <HomeHelp />
-            <HomeContact />
-            <HomeFooter />
+            {/*<HomeMain />*/}
+            {/*<HomeAbout />*/}
+            {/*<HomeHelp />*/}
+            {/*<HomeContact />*/}
+            {/*<HomeFooter />*/}
         </>
     );
 };
