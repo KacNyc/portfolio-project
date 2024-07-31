@@ -7,138 +7,140 @@ header {
   padding: 0;
   width: calc(100% - 142px);
   min-height: 950px;
-}
 
-/* Przyciski logowania i Rejestracji */
-.loginBar {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  z-index: 10;
-}
 
-.loginBar li {
-  display: inline-block;
-  text-decoration: none;
-  color: #737373;
-  padding: 9px 10px;
-  font-size: 13px;
-  border: 0.75px solid transparent;
-  box-sizing: border-box;
-  cursor: pointer;
-}
+  /* Przyciski logowania i Rejestracji */
+  .loginBar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    z-index: 10;
+  }
 
-.loginBar li:hover {
-  border-color: #FAD648;
-  color: #737373;
-}
+  .loginBar li {
+    display: inline-block;
+    text-decoration: none;
+    color: #737373;
+    padding: 9px 10px;
+    font-size: 13px;
+    border: 0.75px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
 
-/* Stylizacja wewnętrznych elementów li, aby mogły być klikalne */
-li a {
-  text-decoration: none;
-  color: inherit;
-}
+  .loginBar li:hover {
+    border-color: #FAD648;
+    color: #737373;
+  }
 
-/* Menu bar */
-nav {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative; /* Aby menu było na wierzchu */
-  z-index: 10; /* Wyższy z-index, aby było na wierzchu */
-}
+  /* Stylizacja wewnętrznych elementów li, aby mogły być klikalne */
+  li a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  gap: 15px;
-}
+  /* Menu bar */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative; /* Aby menu było na wierzchu */
+    z-index: 10; /* Wyższy z-index, aby było na wierzchu */
+  }
 
-nav li {
-  text-decoration: none;
-  color: #3C3C3C;
-  padding: 9px 10px;
-  font-size: 18px;
-  border: 0.75px solid transparent; /* Transparentny border, który zmienia się na kolorowy przy hover */
-  box-sizing: border-box;
-  cursor: pointer;
-}
+  nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+  }
 
-nav li:hover {
-  border-color: #3C3C3C;
-}
-/* Obraz */
-.header-image {
-  height: 963px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-right: 100dvh;
-  z-index: -1;
-}
+  nav li {
+    text-decoration: none;
+    color: #3C3C3C;
+    padding: 9px 10px;
+    font-size: 18px;
+    border: 0.75px solid transparent; /* Transparentny border, który zmienia się na kolorowy przy hover */
+    box-sizing: border-box;
+    cursor: pointer;
+  }
 
-/* Sekcja Hero */
-.hero {
-  display: flex;
-  flex-direction: column;
-  margin-left: 50rem;
-  height: 350px;
-  width: 50rem;
-}
+  nav li:hover {
+    border-color: #3C3C3C;
+  }
 
-/* Kontener dla treści */
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  justify-content: center;
-  margin-top: 300px;
-}
+  /* Obraz */
+  .header-image {
+    height: 963px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 100dvh;
+    z-index: -1;
+  }
 
-/* Styl dla linków w hero-content */
-.hero-content a {
-  font-size: 38px;
-  color: #3C3C3C;
-  margin-bottom: 20px;
-  letter-spacing: -0.76px;
-}
+  /* Sekcja Hero */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50rem;
+    height: 350px;
+    width: 50rem;
+  }
 
-/* Styl dla obrazka w hero-content */
-.hero-content img {
-  width: 253px;
-  margin-top: 25px;
-  margin-bottom: 65px;
-}
+  /* Kontener dla treści */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    margin-top: 300px;
+  }
 
-/* Styl dla kontenera przycisków */
-.hero-btn {
-  display: flex;
-  flex-direction: row;
-  gap: 44px;
-}
+  /* Styl dla linków w hero-content */
+  .hero-content a {
+    font-size: 38px;
+    color: #3C3C3C;
+    margin-bottom: 20px;
+    letter-spacing: -0.76px;
+  }
 
-/* Styl dla przycisków */
-.hero-content .button {
-  font-size: 36px;
-  font-weight: 300;
-  border: 0.75px solid #3C3C3C;
-  width: 310px;
-  height: 120px;
-  text-decoration: none;
-  color: #3C3C3C;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* Styl dla obrazka w hero-content */
+  .hero-content img {
+    width: 253px;
+    margin-top: 25px;
+    margin-bottom: 65px;
+  }
+
+  /* Styl dla kontenera przycisków */
+  .hero-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+  }
+
+  /* Styl dla przycisków */
+  .hero-content .button {
+    font-size: 36px;
+    font-weight: 300;
+    border: 0.75px solid #3C3C3C;
+    width: 310px;
+    height: 120px;
+    text-decoration: none;
+    color: #3C3C3C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
