@@ -5,11 +5,12 @@ import '../scss/homeHeader.scss';
 import HomeSteps from './HomeSteps';
 import HomeThreeColumns from "./HomeThreeColumns.jsx";
 import HomeAbout from "./HomeAbout.jsx";
+import HomeMain from "./HomeMain.jsx";
 
 const Home = () => {
     return (
         <>
-            <header>
+            <header className="home">
                 <img className="header-image" src="/src/assets/assets/Home-Hero-Image.jpg" alt="Hero"/>
                 <div className="loginBar">
                     <ul>
@@ -48,16 +49,16 @@ const Home = () => {
                     <HomeAbout />
                 </section>
             </Element>
-            <Element name="organizations">
-                <section id="organizations">
-                    {/* Zawartość sekcji "Fundacja i organizacje" */}
-                </section>
-            </Element>
-            <Element name="contact">
-                <section id="contact">
-                    {/* Zawartość sekcji "Kontakt" */}
-                </section>
-            </Element>
+            {/*<Element name="organizations">*/}
+            {/*    <section id="organizations">*/}
+            {/*        /!* Zawartość sekcji "Fundacja i organizacje" *!/*/}
+            {/*    </section>*/}
+            {/*</Element>*/}
+            {/*<Element name="contact">*/}
+            {/*    <section id="contact">*/}
+            {/*        /!* Zawartość sekcji "Kontakt" *!/*/}
+            {/*    </section>*/}
+            {/*</Element>*/}
         </>
     );
 };

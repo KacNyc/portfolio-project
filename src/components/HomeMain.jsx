@@ -1,37 +1,99 @@
-import React from 'react';
-import homeMain from './homeMain.scss';
+import React, { useState } from 'react';
+import '../scss/homeMain.scss';
 
 const entries = {
     fundacje: [
-        ["Fundacja 1", "Opis 1", "Egestas, sed, tempus"],
-        ["Fundacja 2", "Opis 2", "Ut, aliquam, purus, sit, amet"],
-        ["Fundacja 3", "Opis 3", "Mi, quis, hendrerit, dolor"],
-        ["Fundacja 4", "Opis 4", "Nunc, lobortis, mattis, aliquam"],
-        ["Fundacja 5", "Opis 5", "Vestibulum, sit, amet, cursus"],
-        ["Fundacja 6", "Opis 6", "In, viverra, orci, mollis"],
-        ["Fundacja 7", "Opis 7", "Aenean, facilisis, mi, eget"],
-        ["Fundacja 8", "Opis 8", "Mauris, pharetra, nisl, vitae"],
-        ["Fundacja 9", "Opis 9", "Curabitur, tristique, libero, vitae"],
+        ["Fundacja “Dbam o Zdrowie”", "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.", "ubrania, jedzenie, sprzęt AGD, meble, zabawki"],
+        ["Fundacja “Dla dzieci”", "Cel i misja: Pomoc dzieciom z ubogich rodzin.", "ubrania, meble, zabawki"],
+        ["Fundacja “Bez domu”", "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.", "ubrania, jedzenie, ciepłe koce"]
     ],
     organizacje: [
-        ["Organizacja 1", "Opis 1", "Egestas, sed, tempus"],
-        ["Organizacja 2", "Opis 2", "Ut, aliquam, purus, sit, amet"],
-        ["Organizacja 3", "Opis 3", "Mi, quis, hendrerit, dolor"],
-        ["Organizacja 4", "Opis 4", "Nunc, lobortis, mattis, aliquam"],
-        ["Organizacja 5", "Opis 5", "Vestibulum, sit, amet, cursus"],
-        ["Organizacja 6", "Opis 6", "In, viverra, orci, mollis"],
+        ["Organizacja “Lorem Ipsum 1”", "Quis varius quam quisque id diam vel quam elementum pulvinar.", "Egestas, sed, tempus"],
+        ["Organizacja “Lorem Ipsum 2”", "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.", "Ut, aliquam, purus, sit, amet"],
+        ["Organizacja “Lorem Ipsum 3”", "Scelerisque in dictum non consectetur a erat nam.", "Mi, quis, hendrerit, dolor"]
     ],
     zbiorki: [
-        ["Zbiórka 1", "Opis 1", "Egestas, sed, tempus"],
-        ["Zbiórka 2", "Opis 2", "Ut, aliquam, purus, sit, amet"],
-        ["Zbiórka 3", "Opis 3", "Mi, quis, hendrerit, dolor"],
+        ["Zbiórka “Lorem Ipsum 1”", "Quis varius quam quisque id diam vel quam elementum pulvinar.", "Egestas, sed, tempus"],
+        ["Zbiórka “Lorem Ipsum 2”", "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.", "Ut, aliquam, purus, sit, amet"],
+        ["Zbiórka “Lorem Ipsum 3”", "Scelerisque in dictum non consectetur a erat nam.", "Mi, quis, hendrerit, dolor"]
     ]
 };
 
+const ITEMS_PER_PAGE = 3;
+
 const HomeMain = () => {
+    const [category, setCategory] = useState('fundacje');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [hoveredButton, setHoveredButton] = useState(null);
+
+    const handleCategoryChange = (newCategory) => {
+        setCategory(newCategory);
+        setCurrentPage(1);
+    };
+
+    const handleMouseEnter = (buttonName) => {
+        setHoveredButton(buttonName);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredButton(null);
+    };
+
+    const currentEntries = entries[category].slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(entries[category].length / ITEMS_PER_PAGE);
+
     return (
         <header>
-            {/* Twoja zawartość nagłówka */}
+            <section id="organizations">
+                <h1>Komu pomagamy?</h1>
+                <img className="decoration-img" src="src/assets/assets/Decoration.svg" alt="Decoration" />
+                <div className="buttons">
+                    {['fundacje', 'organizacje', 'zbiorki'].map((btn) => (
+                        <button
+                            key={btn}
+                            onClick={() => handleCategoryChange(btn)}
+                            onMouseEnter={() => handleMouseEnter(btn)}
+                            onMouseLeave={handleMouseLeave}
+                            className={`${btn === category ? 'active' : ''} ${btn === hoveredButton ? 'hovered' : ''}`}
+                        >
+                            {btn === 'fundacje' && 'Fundacjom'}
+                            {btn === 'organizacje' && 'Organizacjom pozarządowym'}
+                            {btn === 'zbiorki' && 'Lokalnym zbiórkom'}
+                        </button>
+                    ))}
+                </div>
+                <div className="content-container">
+                    <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz
+                        sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                    <div className="entries">
+                        {currentEntries.map(([title, description, details], index) => (
+                            <div key={index} className="entry">
+                                <div>
+                                    <div>
+                                        <h2>{title}</h2>
+                                        <p>{description}</p>
+                                    </div>
+                                    <span>{details}</span>
+                                </div>
+                                <hr/>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="site-number">
+                        {['fundacje', 'organizacje', 'zbiorki'].map((btn, index) => (
+                            <button
+                                key={btn}
+                                onClick={() => handleCategoryChange(btn)}
+                                onMouseEnter={() => handleMouseEnter(btn)}
+                                onMouseLeave={handleMouseLeave}
+                                className={`${btn === category ? 'active' : ''} ${btn === hoveredButton ? 'hovered' : ''}`}
+                            >
+                                {index + 1} {/* Wyświetla numery 1, 2, 3 */}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </header>
     );
 };

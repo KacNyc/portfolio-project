@@ -1,11 +1,9 @@
 /* Nagłówek i pasek logowania */
-header {
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 142px;
   padding: 0;
-  width: calc(100% - 142px);
   min-height: 950px;
 
 
@@ -19,6 +17,7 @@ header {
     list-style: none;
     position: relative;
     z-index: 10;
+    margin-right: 142px;
   }
 
   .loginBar li {
@@ -52,6 +51,7 @@ header {
     margin: 0;
     position: relative; /* Aby menu było na wierzchu */
     z-index: 10; /* Wyższy z-index, aby było na wierzchu */
+    margin-right: 142px;
   }
 
   nav ul {
@@ -104,6 +104,7 @@ header {
     height: 100%;
     justify-content: center;
     margin-top: 300px;
+    margin-right: 142px;
   }
 
   /* Styl dla linków w hero-content */
