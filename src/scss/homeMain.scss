@@ -119,30 +119,30 @@ header {
             width: 100%;
           }
         }
+      }
+      .site-number {
+        width: 155px;
+        display: flex;
+        justify-content: space-between;
 
-        .site-number {
-          width: 155px;
-          display: flex;
-          justify-content: space-between;
+        button {
+          width: 40px;
+          height: 50px;
+          margin-top: 63px;
+          @include font-open-sans(normal, $font-size-button);
+          color: $color-dark-gray;
+          background: none;
+          border: none;
+          cursor: pointer;
+          transition: border 0.3s;
 
-          button {
-            width: 40px;
-            height: 50px;
-            @include font-open-sans(normal, $font-size-button);
-            color: $color-dark-gray;
-            background: none;
-            border: none;
-            cursor: pointer;
-            transition: border 0.3s;
+          &.active,
+          &.hovered {
+            border: 1px solid $color-dark-gray;
+          }
 
-            &.active,
-            &.hovered {
-              border: 1px solid $color-dark-gray;
-            }
-
-            &:hover {
-              border: 1px solid $color-dark-gray;
-            }
+          &:hover {
+            border: 1px solid $color-dark-gray;
           }
         }
       }
