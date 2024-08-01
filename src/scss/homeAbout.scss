@@ -1,13 +1,21 @@
+// Kolory
+$background-color: #F0F1F1;
+$text-color: #3C3C3C;
+
+// Czcionki
+$font-base: 'Open Sans', sans-serif;
+$font-size-large: 38px;
+$font-size-medium: 30px;
+$line-height-medium: 54px;
+
 .homeAbout {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background: #F0F1F1;
+  background: $background-color;
   height: 935px;
-  margin-top: -210px;
-  color: #3C3C3C;
+  color: $text-color;
   justify-content: center;
-
 
   .container {
     width: 50rem;
@@ -17,15 +25,9 @@
     text-align: center;
     row-gap: 20px;
 
-    //flex: 1;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
-    //padding: 0 20px;
-
     .decoration-img {
       width: 253px;
+      align-self: center;
     }
 
     .signature-img {
@@ -35,12 +37,11 @@
     }
 
     h1 {
-      font: normal normal normal 38px Open Sans;
+      font: normal normal normal $font-size-large $font-base;
     }
 
     p {
-      font: normal normal normal 30px/54px Open Sans;
-
+      font: normal normal normal $font-size-medium/$line-height-medium $font-base;
     }
   }
 
@@ -50,9 +51,4 @@
     object-fit: cover;
     flex: 1;
   }
-
-
 }
-
-
-
