@@ -14,7 +14,7 @@ const Home = () => {
             <HomeHeader />
             {/*<HomeThreeColumns />*/}
             {/*<HomeSteps />*/}
-            <HomeMain />
+            {/*<HomeMain />*/}
             {/*<HomeAbout />*/}
             {/*<HomeHelp />*/}
             {/*<HomeContact />*/}

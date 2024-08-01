@@ -49,11 +49,11 @@ const Home = () => {
                     <HomeAbout />
                 </section>
             </Element>
-            {/*<Element name="organizations">*/}
-            {/*    <section id="organizations">*/}
-            {/*        /!* Zawartość sekcji "Fundacja i organizacje" *!/*/}
-            {/*    </section>*/}
-            {/*</Element>*/}
+            <Element name="organizations">
+                <section id="organizations">
+                    <HomeMain />
+                </section>
+            </Element>
             {/*<Element name="contact">*/}
             {/*    <section id="contact">*/}
             {/*        /!* Zawartość sekcji "Kontakt" *!/*/}

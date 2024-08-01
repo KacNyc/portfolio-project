@@ -80,17 +80,30 @@ const HomeMain = () => {
                         ))}
                     </div>
                     <div className="site-number">
-                        {['fundacje', 'organizacje', 'zbiorki'].map((btn, index) => (
-                            <button
-                                key={btn}
-                                onClick={() => handleCategoryChange(btn)}
-                                onMouseEnter={() => handleMouseEnter(btn)}
-                                onMouseLeave={handleMouseLeave}
-                                className={`${btn === category ? 'active' : ''} ${btn === hoveredButton ? 'hovered' : ''}`}
-                            >
-                                {index + 1} {/* Wyświetla numery 1, 2, 3 */}
-                            </button>
-                        ))}
+                        <button
+                            onClick={() => handleCategoryChange('fundacje')}
+                            onMouseEnter={() => handleMouseEnter('fundacje')}
+                            onMouseLeave={handleMouseLeave}
+                            className={`fundacje ${category === 'fundacje' ? 'active' : ''} ${hoveredButton === 'fundacje' ? 'hovered' : ''}`}
+                        >
+                            1
+                        </button>
+                        <button
+                            onClick={() => handleCategoryChange('organizacje')}
+                            onMouseEnter={() => handleMouseEnter('organizacje')}
+                            onMouseLeave={handleMouseLeave}
+                            className={`organizacje ${category === 'organizacje' ? 'active' : ''} ${hoveredButton === 'organizacje' ? 'hovered' : ''}`}
+                        >
+                            2
+                        </button>
+                        <button
+                            onClick={() => handleCategoryChange('zbiorki')}
+                            onMouseEnter={() => handleMouseEnter('zbiorki')}
+                            onMouseLeave={handleMouseLeave}
+                            className={`zbiorki ${category === 'zbiorki' ? 'active' : ''} ${hoveredButton === 'zbiorki' ? 'hovered' : ''}`}
+                        >
+                            3
+                        </button>
                     </div>
                 </div>
             </section>
