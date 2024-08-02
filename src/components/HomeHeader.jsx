@@ -6,6 +6,7 @@ import HomeSteps from './HomeSteps';
 import HomeThreeColumns from "./HomeThreeColumns.jsx";
 import HomeAbout from "./HomeAbout.jsx";
 import HomeMain from "./HomeMain.jsx";
+import HomeContact from "./HomeContact.jsx";
 
 const Home = () => {
     return (
@@ -54,11 +55,11 @@ const Home = () => {
                     <HomeMain />
                 </section>
             </Element>
-            {/*<Element name="contact">*/}
-            {/*    <section id="contact">*/}
-            {/*        /!* Zawartość sekcji "Kontakt" *!/*/}
-            {/*    </section>*/}
-            {/*</Element>*/}
+            <Element name="contact">
+                <section id="contact">
+                    <HomeContact />
+                </section>
+            </Element>
         </>
     );
 };
