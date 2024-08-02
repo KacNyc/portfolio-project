@@ -2,6 +2,8 @@ $font-open-sans: "Open Sans", sans-serif;
 $color-dark-gray: #3C3C3C;
 $color-light-gray: #3C3C3C26;
 $color-border: #707070;
+$color-error: #FF0000; // Kolor czerwony dla komunikatów o błędach
+$color-success: #0E8E33; // Kolor zielony dla komunikatów o sukcesie
 
 .contact-container {
   margin-top: 80px;
@@ -55,7 +57,7 @@ $color-border: #707070;
     }
 
     h2 {
-      margin-bottom: 12px;
+      margin-bottom: 5px;
       font: normal normal 600 16px $font-open-sans;
       color: $color-dark-gray;
       text-align: left;
@@ -67,7 +69,6 @@ $color-border: #707070;
       font: normal normal normal 18px $font-open-sans;
       color: $color-dark-gray;
       border: none;
-      margin-bottom: 40px;
       border-bottom: 1px solid $color-border;
     }
 
@@ -80,17 +81,12 @@ $color-border: #707070;
         .form-group {
           flex-direction: column;
           width: 256px;
-
-          hr {
-            border: none;
-            height: 1px;
-            margin: 0;
-          }
         }
       }
 
       .form-textarea {
         flex-direction: column;
+        margin-top: 40px;
 
         textarea {
           width: 528px;
@@ -117,6 +113,19 @@ $color-border: #707070;
           transition: border 0.3s;
         }
       }
+    }
+
+    // Komunikaty o błędach i sukcesie
+    .error-message {
+      color: $color-error;
+      font: normal normal 600 16px $font-open-sans;
+      margin: 0;
+    }
+
+    .success-message {
+      color: $color-success;
+      font: normal normal 600 16px $font-open-sans;
+      //margin-top: 10px;
     }
   }
 }
@@ -151,4 +160,3 @@ $color-border: #707070;
     }
   }
 }
-
