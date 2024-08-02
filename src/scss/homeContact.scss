@@ -1,0 +1,154 @@
+$font-open-sans: "Open Sans", sans-serif;
+$color-dark-gray: #3C3C3C;
+$color-light-gray: #3C3C3C26;
+$color-border: #707070;
+
+.contact-container {
+  margin-top: 80px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .background-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.79);
+      z-index: 1;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 530px;
+    margin-right: 150px;
+
+    h1 {
+      margin-bottom: 20px;
+      font: normal normal normal 38px $font-open-sans;
+      color: $color-dark-gray;
+    }
+
+    img {
+      margin-bottom: 70px;
+      width: 253px;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font: normal normal 600 16px $font-open-sans;
+      color: $color-dark-gray;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      font: normal normal normal 18px $font-open-sans;
+      color: $color-dark-gray;
+      border: none;
+      margin-bottom: 40px;
+      border-bottom: 1px solid $color-border;
+    }
+
+    .form-container {
+      div {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        .form-group {
+          flex-direction: column;
+          width: 256px;
+
+          hr {
+            border: none;
+            height: 1px;
+            margin: 0;
+          }
+        }
+      }
+
+      .form-textarea {
+        flex-direction: column;
+
+        textarea {
+          width: 528px;
+          height: 100px;
+          padding: 10px;
+          resize: none;
+          margin-bottom: 10px;
+          font: normal normal normal 18px $font-open-sans;
+          color: $color-dark-gray;
+          border: none;
+          border-bottom: 1px solid $color-border;
+        }
+
+        button {
+          align-self: flex-end;
+          width: 150px;
+          height: 50px;
+          margin-top: 40px;
+          font: normal normal 300 18px $font-open-sans;
+          color: #000000;
+          background: none;
+          border: 0.75px solid $color-dark-gray;
+          cursor: pointer;
+          transition: border 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100px;
+  padding: 20px;
+
+  p {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: right;
+    font: normal normal normal 18px Open Sans;
+    color: $color-dark-gray;
+  }
+
+  .social-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    margin-right: 142px;
+
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
